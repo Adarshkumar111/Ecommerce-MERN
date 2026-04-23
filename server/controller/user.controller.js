@@ -70,3 +70,12 @@ export const verifyUser=TryCatch(async(req,res)=>{
         })
     }
 })
+
+// get user details
+
+export const myProfile=TryCatch(async(req,res)=>{
+    const user= await User.findById(req.user._id);
+
+
+    res.json(user);
+})
