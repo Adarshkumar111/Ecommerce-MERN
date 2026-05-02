@@ -1,8 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
-import userRoutes from "./routes/user.route.js";
 import cloudinary from "cloudinary";
+import userRoutes from "./routes/user.route.js";
+import productRoutes from "./routes/product.route.js";
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ const PORT = process.env.PORT || 3000;
 
 // routes
 app.use("/api/", userRoutes);
+app.use("/api/products", productRoutes);
 
 
 
