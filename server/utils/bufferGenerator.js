@@ -4,7 +4,7 @@ import path from 'path';
 const bufferGenerator =(file) =>{
     const parser = new DaraUriParser();
 
-    const extName= path.estname(file.originalname).toString();
+    const extName= path.extname(file.originalname).toString();
 
     return parser.format(extName, file.buffer);
 };

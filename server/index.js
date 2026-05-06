@@ -5,6 +5,10 @@ import cloudinary from "cloudinary";
 import userRoutes from "./routes/user.route.js";
 import productRoutes from "./routes/product.route.js";
 
+import morgan from "morgan";
+
+
+
 dotenv.config();
 
 cloudinary.v2.config({
@@ -16,12 +20,13 @@ cloudinary.v2.config({
 
 const app = express();
 app.use(express.json());
+app.use(morgan("dev"));
 
 const PORT = process.env.PORT || 3000;
 
 // routes
 app.use("/api/", userRoutes);
-app.use("/api/products", productRoutes);
+app.use("/api/", productRoutes);
 
 
 
