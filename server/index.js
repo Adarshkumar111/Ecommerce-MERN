@@ -4,6 +4,7 @@ import connectDB from "./utils/db.js";
 import cloudinary from "cloudinary";
 import userRoutes from "./routes/user.route.js";
 import productRoutes from "./routes/product.route.js";
+import cartRoutes from "./routes/cart.route.js";
 
 import morgan from "morgan";
 
@@ -27,6 +28,7 @@ const PORT = process.env.PORT || 3000;
 // routes
 app.use("/api/", userRoutes);
 app.use("/api/", productRoutes);
+app.use("/api/", cartRoutes);
 
 
 
