@@ -6,6 +6,7 @@ import userRoutes from "./routes/user.route.js";
 import productRoutes from "./routes/product.route.js";
 import cartRoutes from "./routes/cart.route.js";
 import addressRoutes from "./routes/address.route.js";
+import orderRoutes from "./routes/order.route.js";
 
 import morgan from "morgan";
 
@@ -31,6 +32,7 @@ app.use("/api/", userRoutes);
 app.use("/api/", productRoutes);
 app.use("/api/", cartRoutes);
 app.use("/api/", addressRoutes);
+app.use("/api/", orderRoutes);
 
 
 
